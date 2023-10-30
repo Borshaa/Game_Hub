@@ -1,0 +1,109 @@
+* {
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  font-size: 120%;
+  background: #F8F8FF;
+  text-align: center;
+}
+.container {
+  container-type: relative;
+  text-align: center;
+}
+
+.items {
+  position: relative;
+  padding: 45px 0 15px 0;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.items .cards {
+  position: relative;
+  margin-bottom: 100px;
+  text-align: center;
+}
+
+.items .cards .cards-text {
+  font-size: 120%;
+  position: relative;
+  width: 100%;
+  padding: 35px 30px 0px 30px;
+  text-align: center;
+  background: #FFF;
+  border-radius: 0 0 5px 5px;
+  transition: .5s;
+}
+
+.items .cards img {
+  height: 30%;
+  width: 30%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  transition: .3s;
+}
+
+.header {
+  width: 30%;
+  margin: 50px auto 0px;
+  color: white;
+  background: #023673;
+  text-align: center;
+  border: 1px solid #B0C4DE;
+  border-bottom: none;
+  border-radius: 10px 10px 0px 0px;
+  padding: 20px;
+}
+form, .content {
+  width: 30%;
+  margin: 0px auto;
+  padding: 20px;
+  border: 1px solid #B0C4DE;
+  background: white;
+  border-radius: 0px 0px 10px 10px;
+}
+
+.input-group {
+  margin: 10px 0px 10px 0px;
+}
+.input-group label {
+  display: block;
+  text-align: left;
+  margin: 3px;
+}
+.input-group input {
+  height: 30px;
+  width: 93%;
+  padding: 5px 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid gray;
+}
+.btn {
+  padding: 10px;
+  font-size: 15px;
+  color: white;
+  background: #023673;
+  border: none;
+  border-radius: 5px;
+}
+.error {
+  width: 92%; 
+  margin: 0px auto; 
+  padding: 10px; 
+  border: 1px solid #a94442; 
+  color: #a94442; 
+  background: #f2dede; 
+  border-radius: 5px; 
+  text-align: left;
+}
+.success {
+  color: #023673; /*bc763d;*/ 
+  background: #dff0d8; 
+  border: 1px solid #000;
+  margin-bottom: 20px;
+}
