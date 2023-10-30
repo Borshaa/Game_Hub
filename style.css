@@ -10,6 +10,7 @@ body {
 .container {
   container-type: relative;
   text-align: center;
+  margin: auto;
 }
 
 .items {
@@ -36,6 +37,7 @@ body {
   background: #FFF;
   border-radius: 0 0 5px 5px;
   transition: .5s;
+  margin: auto;
 }
 
 .items .cards img {
