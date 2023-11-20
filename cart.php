@@ -8,6 +8,7 @@
     $cart = isset($_SESSION['cart']) ? $_SESSION['cart'] : array();
 
     // Check if the form is submitted
+    
     if($_SERVER['REQUEST_METHOD'] == 'POST') {
         // Get the form data
         $product_id = $_POST['product_id'];
@@ -35,7 +36,6 @@
         exit();
     }
 ?>
-
 <!DOCTYPE html>
 <html>
 <head>
@@ -46,12 +46,19 @@
     <script src="http://ajax.com.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"> </script>
     <script src="js/bootstrap.min.js"></script>
 </head>
+
+<?php include 'Navbar.php' ?>
+
 <body>
-<?php include 'Navbar.php' ?> 
     <div class="container">
         <h2> Shopping Cart</h2>
         <?php if(count($cart) == 0): ?>
-            <p>Your cart is empty right now.</p>
+            <?php
+            if (isset($_GET['message'])) {
+                echo $_GET['message'];}
+                $_SESSION['cart'] = array();
+            ?>
+            <p>Your cart is empty.</p>
             <a href="ecommerce_index.php" class="btn btn-primary">Explore Shopping</a>
             <a href="index.php" class="btn btn-primary">Go to Homepage</a>
         <?php else: ?>
@@ -59,7 +66,7 @@
                 <thead>
                     <tr>
                         <th>Product Name</th>
-                        <th>price</th>
+                        <th>Price</th>
                         <th>Quantity</th>
                         <th>Subtotal</th>
                     </tr>
@@ -89,9 +96,3 @@
     </div>
 </body>
 </html> 
-
-
-
-
-
-
