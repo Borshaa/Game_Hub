@@ -12,16 +12,15 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Checkout</title>
+    <title>Cart</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css" />
     <script src="http://ajax.com.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"> </script>
-    <script src="js/bootstrap.min,js"></script>
+    <script src="js/bootstrap.min.js"></script>
 </head>
-<body>
-<?php include 'Navbar.php' ?> 
-    
+
+<?php include 'Navbar.php' ?>
     <div class="container">
         <h2>Checkout</h2>
         <form method="post" action="place_order.php">
@@ -39,7 +38,7 @@
             </div>
             <div class="form-group">
                 <label for="delivery">Payment Method:</label>
-                <select class="form-control" id="Payment" name="Payment" required>
+                <select class="form-control" id="payment" name="payment" required>
                     <option value="">Select Payment Method</option>
                     <option value="BKash">BKash</option>
                     <option value="Nagad">Nagad</option>
@@ -50,7 +49,4 @@
             <button type="submit" class="btn btn-primary">Place Order</button>
 
         </form>
-        
     </div>
-</body>
-</html>
