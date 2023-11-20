@@ -20,6 +20,8 @@
       <li><a href="contact.php">Contact Us</a></li>
       <li><a href="terms.php">Terms & Conditions</a></li>
       <li><a href="ecommerce_index.php">Buy Gaming Accessories</a></li>
+      <li><a href="game_index.php">Free Games</a></li>
+      <li><a href="dev_game.php">Submit Your Games</a></li>
       <li><a href="cart.php">Your Cart</a></li>
     </ul>
   </div>
