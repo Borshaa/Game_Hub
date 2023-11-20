@@ -8,18 +8,8 @@
         $name = $_POST['name'];
         $phone = $_POST['phone'];
         $address = $_POST['address'];
-        $payment_method = $_POST['payment-method'];
+        $payment_method = $_POST['payment'];
 
-        // Save the order data in a file or database
-        $order_data = array(
-            'name' => $name,
-            'phone' => $phone,
-            'address' => $address,
-            'payment_method' => $payment_method,
-            'cart' => $cart
-        );
-        // You can save the order data to a file, database or send it to an email address
-        // In this example, we will just print the data on the screen
         echo '<h2>Your Order Details:</h2>';
         echo '<p><strong>Name:</strong> ' . $name . '</p>';
         echo '<p><strong>Phone:</strong> ' . $phone . '</p>';
@@ -40,9 +30,14 @@
         echo '<tr><td colspan="3" class="text-right"><strong>Total:</strong></td><td>BDT ' . $total_price . '</td></tr>';
         echo '</tbody>';
         echo '</table>';
-
+        $con = mysqli_connect('localhost','root', '', 'project');
+        $sql = "INSERT INTO `order` (`name`, `address`, `status`, `order_total`, `number`) VALUES ('$name', '$address', 'Pending', $total_price, $phone)";
+        $stmt = mysqli_query($con, $sql);
+        
         // Clear the cart
         $_SESSION['cart'] = array();
-        header('Location: cart.php');
+        $message = 'Your Order Has Been Successfully Placed';
+        header('Location: cart.php?message=' . $message);
         exit();
     }
+?>
