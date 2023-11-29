@@ -23,6 +23,8 @@
       <li><a href="game_index.php">Free Games</a></li>
       <li><a href="dev_game.php">Submit Your Games</a></li>
       <li><a href="cart.php">Your Cart</a></li>
+      <li><a href="feedback.php">Feedback</a></li>
+      <li><a href="logout.php">Logout</a></li>
     </ul>
   </div>
 </nav>
