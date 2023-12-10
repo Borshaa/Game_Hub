@@ -84,11 +84,12 @@ INSERT INTO `game` (`Id`, `Title`, `Image`, `Details`, `Link`, `Developer/s`, `D
 -- --------------------------------------------------------
 
 --
--- Table structure for table `order`
+-- Table structure for table `orders`
 --
 
-CREATE TABLE `order` (
+CREATE TABLE `orders` (
   `order_id` int(11) NOT NULL,
+  `user_id` int(11) NOT NULL,
   `name` varchar(55) NOT NULL,
   `address` varchar(255) NOT NULL,
   `status` varchar(55) NOT NULL,
@@ -173,9 +174,9 @@ ALTER TABLE `game`
   ADD PRIMARY KEY (`Id`);
 
 --
--- Indexes for table `order`
+-- Indexes for table `orders`
 --
-ALTER TABLE `order`
+ALTER TABLE `orders`
   ADD PRIMARY KEY (`order_id`);
 
 --
@@ -213,9 +214,9 @@ ALTER TABLE `game`
   MODIFY `Id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
--- AUTO_INCREMENT for table `order`
+-- AUTO_INCREMENT for table `orders`
 --
-ALTER TABLE `order`
+ALTER TABLE `orders`
   MODIFY `order_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 
 --
