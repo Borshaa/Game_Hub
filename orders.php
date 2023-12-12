@@ -15,6 +15,7 @@ if ($user) {
     $orders = $con->query($sql);
 }
 ?>
+
 <!DOCTYPE html>
 <html>
 
@@ -36,6 +37,7 @@ if ($user) {
             <thead>
                 <tr>
                     <th>Order ID</th>
+                    <th>Track ID</th>
                     <th>Status</th>
                     <th>Name</th>
                     <th>Address</th>
@@ -46,6 +48,7 @@ if ($user) {
                 <?php foreach ($orders as $order) : ?>
                     <tr>
                         <td><?= $order['order_id'] ?></td>
+                        <td><a href="http://localhost/Gamers_Hub/tracking.php"><?= $order['track_id'] ?></a></td>
                         <td><?= $order['status'] ?></td>
                         <td><?= $order['name'] ?></td>
                         <td><?= $order['address'] ?></td>

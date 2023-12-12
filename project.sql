@@ -84,17 +84,41 @@ INSERT INTO `game` (`Id`, `Title`, `Image`, `Details`, `Link`, `Developer/s`, `D
 -- --------------------------------------------------------
 
 --
+-- Table structure for table `del_man`
+--
+
+CREATE TABLE `del_man` (
+  `del_man_id` int(11) NOT NULL,
+  `name` varchar(55) NOT NULL,
+  `number` varchar(55) NOT NULL,
+  PRIMARY KEY (`del_man_id`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `del_man`
+--
+
+INSERT INTO `del_man` (`del_man_id`, `name`, `number`) VALUES
+(1, 'Xenon', '01329394959'),
+(2, 'Rona', '01012345678'),
+(3, 'Riponda', '01969696969');
+
+-- --------------------------------------------------------
+
+--
 -- Table structure for table `orders`
 --
 
 CREATE TABLE `orders` (
   `order_id` int(11) NOT NULL,
+  `track_id` varchar(55) NOT NULL,
   `user_id` int(11) NOT NULL,
   `name` varchar(55) NOT NULL,
   `address` varchar(255) NOT NULL,
   `status` varchar(55) NOT NULL,
   `order_total` int(11) NOT NULL,
-  `number` int(55) NOT NULL
+  `number` int(55) NOT NULL,
+  `del_man_id` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 -- --------------------------------------------------------
