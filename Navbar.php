@@ -2,7 +2,6 @@
 <html lang="en">
 
 <head>
-  <title>Bootstrap Example</title>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
@@ -24,6 +23,7 @@
         <li><a href="ecommerce_index.php">Buy Gaming Accessories</a></li>
         <li><a href="game_index.php">Free Games</a></li>
         <li><a href="dev_game.php">Submit Your Games</a></li>
+        <li><a href="webpage.php">Game Tube</a></li>
         <li><a href="cart.php">Your Cart</a></li>
         <li><a href="orders.php">Orders</a></li>
         <li><a href="feedback.php">Feedback</a></li>
